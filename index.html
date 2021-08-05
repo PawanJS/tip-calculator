@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/app.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1 class="heading-1"><span>SPLI</span><span>TTER</span></h1>
+    <div class="container">
+      <div class="left-column">
+        <div class="bill-amount">
+          <label for="bill-amount">Bill</label>
+          <input
+            type="number"
+            min="0"
+            id="bill-amount"
+            class="js-bill-amount"
+          />
+        </div>
+        <div class="select-tip">
+          <label for="select-tip">Select tip %</label>
+          <div class="tip-container">
+            <button class="btn tip-btn js-tip-btn">5%</button>
+            <button class="btn tip-btn js-tip-btn">10%</button>
+            <button class="btn tip-btn js-tip-btn">15%</button>
+            <button class="btn tip-btn js-tip-btn">25%</button>
+            <button class="btn tip-btn js-tip-btn">50%</button>
+            <input
+              type="number"
+              min="0"
+              id="select-tip"
+              class="js-tip-percent"
+            />
+          </div>
+          <button class="btn calculate-btn js-calculate-btn">Calculate</button>
+        </div>
+        <div class="people-count">
+          <label for="people-count">
+            Number of people
+            <span class="error js-error"></span>
+          </label>
+          <input
+            type="number"
+            min="1"
+            id="people-count"
+            value="1"
+            class="js-people-count"
+          />
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="amount-wrapper">
+          <div class="tip-amount">
+            <span class="amount-text">Tip Amount<span>/ person</span></span>
+            <span class="amount js-total-tip">$0.00</span>
+          </div>
+          <div class="total-amount">
+            <span class="amount-text">Total<span>/ person</span></span>
+            <span class="amount js-total-amount">$0.00</span>
+          </div>
+        </div>
+        <button class="btn reset-btn js-reset-btn">RESET</button>
+      </div>
+    </div>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.pawanjs.xyz">Pawan JS</a>.
+    </footer>
+  </body>
+</html>
