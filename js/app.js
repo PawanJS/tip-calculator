@@ -26,11 +26,14 @@ const totalTipAndBill = function (tipPercent) {
   const bill = +billAmount.value;
   const persons = +peopleCount.value;
 
-  const tip = (bill * tipPercent) / 100 / persons;
-  const total = (bill + tip) / persons;
+  const tip = bill * tipPercent / 100;
+  const total = bill + tip;
 
-  totalTip.textContent = `$${tip.toFixed(2)}`;
-  totalAmount.textContent = `$${total.toFixed(2)}`;
+  const tipPerPerson = tip / persons;
+  const totalPerPerson = total / persons;
+
+  totalTip.textContent = `$${tipPerPerson.toFixed(2)}`;
+  totalAmount.textContent = `$${totalPerPerson.toFixed(2)}`;
 };
 
 // Predefined tip
